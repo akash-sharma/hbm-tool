@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "./hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <typedef class="org.jasypt.hibernate4.type.EncryptedStringType" name="encryptedUserProfile">
+		<param name="encryptorRegisteredName">customHibernateStringEncryptor</param>
+	</typedef>
+	<typedef class="org.jasypt.hibernate4.type.EncryptedStringType" name="encryptedString">
+		<param name="encryptorRegisteredName">customHibernateStringEncryptor</param>
+	</typedef>
+	<typedef class="org.jasypt.hibernate4.type.EncryptedBinaryType" name="encrypted">
+		<param name="encryptorRegisteredName">customHibernateByteEncryptor</param>
+	</typedef>
+	<typedef class="org.jasypt.hibernate4.type.EncryptedStringType" name="encryptedApplicationMember">
+		<param name="encryptorRegisteredName">customHibernateStringEncryptor</param>
+	</typedef>
+	<typedef class="org.jasypt.hibernate4.type.EncryptedStringType" name="encryptedEmployee">
+		<param name="encryptorRegisteredName">customHibernateStringEncryptor</param>
+	</typedef>
+	<typedef class="org.jasypt.hibernate4.type.EncryptedStringType" name="encryptedEmployeeFamilyMember">
+		<param name="encryptorRegisteredName">customHibernateStringEncryptor</param>
+	</typedef>
+</hibernate-mapping>

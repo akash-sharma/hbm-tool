@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.password">HIXIND_TT81</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@hixma.cq66g54vnu5m.us-east-1.rds.amazonaws.com:1521:hixma</property>
+        <property name="hibernate.connection.username">HIXIND_TT81</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="packagesToScan">com.hcentive</property>
+        
+        <!--skip pms entity-->
+        <property name="packageToSkip">com.hcentive.carrier.pms.domain</property>
+        
+		<property name="hibernate.listeners.envers.autoRegister">false</property>
+		<property name="hibernate.cache.use_second_level_cache">false</property>    
+        <mapping resource="custom-mappings-hbm-tool.xml" />
+    </session-factory>
+</hibernate-configuration>
